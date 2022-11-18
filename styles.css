@@ -1,0 +1,53 @@
+/* styles for search wrapper */
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* gap is used here to give space between flex-items , the search users label and the input box */
+  gap: 0.45rem;
+}
+/* styles for input box */
+input {
+  font-size: 1rem;
+  /* this will give the input box a maximum size of 450px so that it does not cover entire screen size on big screens */
+  max-width: 450px;
+}
+/* styles for search wrapper closes */
+
+/* styles for user-cards-container  starts */
+.user-cards-container {
+  display: grid;
+  /* this tells te grid to auto fill columns with minimum width of 150px and strecth it to max when you have the full screensize */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  /* this separates all grid items in this case user-card with this gap on all sides */
+  gap: 0.25rem;
+  /* this gives margin from top to the users cards container so that there is space between the user cards and the input box */
+  margin-top: 1rem;
+}
+
+/* styles for a single user-card starts */
+/* one thing to note is each user-card is in a grid inside user-cards-container */
+.user-card {
+  border: 1px solid black;
+  background-color: white;
+  /* this will give to the elements of user-card space from all sides */
+  padding: 0.5rem;
+}
+/* here we are styling the header class of user-card */
+.user-card > .header {
+  /* here we are styling the user's name */
+  /* from header we are giving bottom margin of 4px */
+  margin-bottom: 0.25rem;
+  /* this is same as 4px  */
+}
+/* here we are styling the body class of user-card */
+.user-card > .body {
+  /* here we are styling the user's email   */
+  font-size: 0.8rem;
+  /* this color will make the email text light */
+  color: #777;
+}
+
+/* here we giving a hide class to hide divs on search */
+.hide {
+  display: none;
+}
